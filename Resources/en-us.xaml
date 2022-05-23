@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Title">Blade and Soul a key tool</s:String>
+    <s:String x:Key="Language">中文</s:String>
+    <s:String x:Key="Welcome">Welcome to use Blade and Soul a key tool</s:String>
+    <s:String x:Key="OneKeyStart">One Key Start</s:String>
+    <s:String x:Key="OneKeyStop">One Key Stop</s:String>
+    <s:String x:Key="Save">Save</s:String>
+    <s:String x:Key="PrimaryService">Blade and Soul Primary Service</s:String>
+    <s:String x:Key="Running">Running</s:String>
+    <s:String x:Key="Closed">Closed</s:String>
+    <s:String x:Key="RankingDaemon">Ranking Daemon</s:String>
+    <s:String x:Key="AccountInventoryDaemon">Account Inventory Daemon</s:String>
+    <s:String x:Key="CacheDaemon">Cache Daemon</s:String>
+    <s:String x:Key="CacheGate">Cache Gate</s:String>
+    <s:String x:Key="PostOfficeDaemon">Post Office Daemon</s:String>
+    <s:String x:Key="LobbyDaemon">Lobby Daemon</s:String>
+    <s:String x:Key="MarketReaderDaemon">Market Reader Daemon</s:String>
+    <s:String x:Key="MarketAgent">Market Agent</s:String>
+    <s:String x:Key="MarketDealerDaemon">Market Dealer Daemon</s:String>
+    <s:String x:Key="ArenaLobby">Arena Lobby</s:String>
+    <s:String x:Key="AchievementDaemon">Achievement Daemon</s:String>
+    <s:String x:Key="DuelBotDaemon">Duel Bot Daemon</s:String>
+    <s:String x:Key="GameDaemon">Game Daemon</s:String>
+    <s:String x:Key="InfoGateDaemon">Info Gate Daemon</s:String>
+    <s:String x:Key="LobbyGate">Lobby Gate</s:String>
+    <s:String x:Key="ChannelChattingServer">Channel Chatting Server</s:String>
+    <s:String x:Key="ManagementAgent">Management Agent</s:String>
+
+</ResourceDictionary>

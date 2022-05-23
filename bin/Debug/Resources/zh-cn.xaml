@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:s="clr-namespace:System;assembly=mscorlib">
+    <s:String x:Key="Title">剑灵一键工具</s:String>
+    <s:String x:Key="Language">EN</s:String>
+    <s:String x:Key="Welcome">欢迎使用剑灵一键工具</s:String>
+    <s:String x:Key="OneKeyStart">一键启动</s:String>
+    <s:String x:Key="OneKeyStop">一键停止</s:String>
+    <s:String x:Key="PrimaryService">剑灵主要服务</s:String>
+    <s:String x:Key="Running">正在运行</s:String>
+    <s:String x:Key="Closed">已关闭</s:String>
+    <s:String x:Key="Save">保存</s:String>
+    <s:String x:Key="RankingDaemon">排行榜进程</s:String>
+    <s:String x:Key="AccountInventoryDaemon">账户库存进程</s:String>
+    <s:String x:Key="CacheDaemon">缓存进程</s:String>
+    <s:String x:Key="CacheGate">缓存网关</s:String>
+    <s:String x:Key="PostOfficeDaemon">邮件系统进程</s:String>
+    <s:String x:Key="LobbyDaemon">角色界面进程</s:String>
+    <s:String x:Key="MarketReaderDaemon">市场客户端进程</s:String>
+    <s:String x:Key="MarketAgent">市场代理</s:String>
+    <s:String x:Key="MarketDealerDaemon">市场商人端进程</s:String>
+    <s:String x:Key="ArenaLobby">竞技场大厅</s:String>
+    <s:String x:Key="AchievementDaemon">成就进程</s:String>
+    <s:String x:Key="DuelBotDaemon">决斗机器人进程</s:String>
+    <s:String x:Key="GameDaemon">游戏进程</s:String>
+    <s:String x:Key="InfoGateDaemon">信息网关进程</s:String>
+    <s:String x:Key="LobbyGate">角色网关</s:String>
+    <s:String x:Key="ChannelChattingServer">聊天频道服务器</s:String>
+    <s:String x:Key="ManagementAgent">管理代理</s:String>
+
+</ResourceDictionary>

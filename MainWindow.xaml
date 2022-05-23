@@ -1,0 +1,303 @@
+﻿<Window x:Name="BNSWindows" x:Class="BNS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BNS"
+        mc:Ignorable="d" ResizeMode="NoResize" Title="{DynamicResource Title}" Loaded="BNSWindows_Loaded" Height="600" Width="700" FontSize="14">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="197*"></RowDefinition>
+            <RowDefinition Height="3*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="290*"></ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0"></Grid>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid  Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                    <RowDefinition Height="2*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid Grid.Row="0">
+                    <TextBlock x:Name="TopTips" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource Welcome}" VerticalAlignment="Center" FontSize="24"/>
+                    <Button x:Name="LanguageCN" Content="{DynamicResource Language}" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Click="LanguageCN_Click"/>
+
+                </Grid>
+                <Grid Grid.Row="1">
+                    <Button x:Name="StartBtn" Content="{DynamicResource OneKeyStart}" HorizontalAlignment="Left" Margin="160,0,0,0" VerticalAlignment="Center" Width="120" Height="40" Background="{x:Null}"/>
+                    <Button x:Name="StopBtn" Content="{DynamicResource OneKeyStop}" HorizontalAlignment="Right" Margin="0,0,160,0" VerticalAlignment="Center" Width="120" Height="40" Background="{x:Null}"/>
+                </Grid>
+                <Grid Grid.Row="2">
+                    <TextBox x:Name="PrimaryServiceTime" HorizontalAlignment="Left" Margin="190,0,0,0" Text="0" VerticalAlignment="Center" Width="40" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <Label x:Name="PrimaryService" Content="{DynamicResource PrimaryService}" HorizontalAlignment="Right" Margin="0,0,190,0" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <Button x:Name="SaveBtn" Content="{DynamicResource Save}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="30" Click="SaveBtn_Click"/>
+                </Grid>
+            </Grid>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                    <RowDefinition Height="1*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--第一行-->
+                <Grid  Grid.Row="0" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="RankingDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="RankingDaemonBtn" Content="{DynamicResource RankingDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="0" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="AccountInventoryDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="AccountInventoryDaemonBtn" Content="{DynamicResource AccountInventoryDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="0" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="CacheDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="CacheDaemonBtn" Content="{DynamicResource CacheDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <!--第二行-->
+                <Grid  Grid.Row="1" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="CacheGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="CacheGateBtn" Content="{DynamicResource CacheGate}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="1" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="PostOfficeDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="PostOfficeDaemonBtn" Content="{DynamicResource PostOfficeDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="1" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="LobbyDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="LobbyDaemonBtn" Content="{DynamicResource LobbyDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <!--第三行-->
+                <Grid  Grid.Row="2" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="MarketReaderDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="MarketReaderDaemonBtn" Content="{DynamicResource MarketReaderDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="2" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="MarketAgentReaderTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="MarketAgentReaderBtn" Content="{DynamicResource MarketAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="2" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="MarketDealerDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="MarketDealerDaemonBtn" Content="{DynamicResource MarketDealerDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <!--第四行-->
+                <Grid  Grid.Row="3" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="MarketAgentDealerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="MarketAgentDealerBtn" Content="{DynamicResource MarketAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="3" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="ArenaLobbyTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="ArenaLobbyBtn" Content="{DynamicResource ArenaLobby}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="3" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="AchievementDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="AchievementDaemonBtn" Content="{DynamicResource AchievementDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <!--第五行-->
+                <Grid  Grid.Row="4" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="DuelBotDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="DuelBotDaemonBtn" Content="{DynamicResource DuelBotDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="4" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="GameDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="GameDaemonBtn" Content="{DynamicResource GameDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="4" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="InfoGateDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="InfoGateDaemonBtn" Content="{DynamicResource InfoGateDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <!--第六行-->
+                <Grid  Grid.Row="5" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="LobbyGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="LobbyGateBtn" Content="{DynamicResource LobbyGate}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="5" Grid.Column="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="ChannelChattingServerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="ChannelChattingServerBtn" Content="{DynamicResource ChannelChattingServer}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+                <Grid  Grid.Row="6" Grid.Column="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"></ColumnDefinition>
+                        <ColumnDefinition Width="8*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid Grid.Column="0">
+                        <TextBox x:Name="ManagementAgentTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Grid>
+                    <Grid Grid.Column="1">
+                        <Button x:Name="ManagementAgentBtn" Content="{DynamicResource ManagementAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+        <Grid Grid.Column="2"></Grid>
+    </Grid>
+</Window>
