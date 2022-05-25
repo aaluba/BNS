@@ -5,97 +5,77 @@
     "PrimaryService": {
       "itselfName": "PrimaryService",
       "textName": "PrimaryServiceTime",
-      "time": 10
+      "time": "0"
     },
     "RankingDaemon": {
       "itselfName": "RankingDaemon",
       "textName": "RankingDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "AccountInventoryDaemon": {
       "itselfName": "AccountInventoryDaemon",
       "textName": "AccountInventoryDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "CacheDaemon": {
       "itselfName": "CacheDaemon",
       "textName": "CacheDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "CacheGate": {
       "itselfName": "CacheGate",
       "textName": "CacheGateTime",
-      "time": 10
+      "time": "0"
     },
     "PostOfficeDaemon": {
       "itselfName": "PostOfficeDaemon",
       "textName": "PostOfficeDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "LobbyDaemon": {
       "itselfName": "LobbyDaemon",
       "textName": "LobbyDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "MarketReaderDaemon": {
       "itselfName": "MarketReaderDaemon",
       "textName": "MarketReaderDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "MarketAgentReader": {
       "itselfName": "MarketAgentReader",
       "textName": "MarketAgentReaderTime",
-      "time": 10
+      "time": "0"
     },
     "MarketDealerDaemon": {
       "itselfName": "MarketDealerDaemon",
       "textName": "MarketDealerDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "MarketAgentDealer": {
       "itselfName": "MarketAgentDealer",
       "textName": "MarketAgentDealerTime",
-      "time": 10
+      "time": "0"
     },
     "ArenaLobby": {
       "itselfName": "ArenaLobby",
       "textName": "ArenaLobbyTime",
-      "time": 10
+      "time": "0"
     },
     "AchievementDaemon": {
       "itselfName": "AchievementDaemon",
       "textName": "AchievementDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "DuelBotDaemon": {
       "itselfName": "DuelBotDaemon",
       "textName": "DuelBotDaemonTime",
-      "time": 10
+      "time": "0"
     },
     "GameDaemon": {
       "itselfName": "GameDaemon",
       "textName": "GameDaemonTime",
-      "time": 10
-    },
-    "InfoGateDaemon": {
-      "itselfName": "InfoGateDaemon",
-      "textName": "InfoGateDaemonTime",
-      "time": 10
-    },
-    "LobbyGate": {
-      "itselfName": "LobbyGate",
-      "textName": "LobbyGateTime",
-      "time": 10
-    },
-    "ChannelChattingServer": {
-      "itselfName": "ChannelChattingServer",
-      "textName": "ChannelChattingServerTime",
-      "time": 10
-    },
-    "ManagementAgent": {
-      "itselfName": "ManagementAgent",
-      "textName": "ManagementAgentTime",
-      "time": 10
+      "time": "0"
     }
   }
 }

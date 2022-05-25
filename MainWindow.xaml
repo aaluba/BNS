@@ -29,7 +29,7 @@
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
                     <TextBlock x:Name="TopTips" HorizontalAlignment="Center" TextWrapping="Wrap" Text="{DynamicResource Welcome}" VerticalAlignment="Center" FontSize="24"/>
-                    <Button x:Name="LanguageCN" Content="{DynamicResource Language}" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Click="LanguageCN_Click"/>
+                    <Button x:Name="LanguageCN" Content="{DynamicResource Language}" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Click="Language_Click"/>
 
                 </Grid>
                 <Grid Grid.Row="1">
@@ -37,9 +37,8 @@
                     <Button x:Name="StopBtn" Content="{DynamicResource OneKeyStop}" HorizontalAlignment="Right" Margin="0,0,160,0" VerticalAlignment="Center" Width="120" Height="40" Background="{x:Null}"/>
                 </Grid>
                 <Grid Grid.Row="2">
-                    <TextBox x:Name="PrimaryServiceTime" HorizontalAlignment="Left" Margin="190,0,0,0" Text="0" VerticalAlignment="Center" Width="40" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    <TextBox x:Name="PrimaryServiceTime" HorizontalAlignment="Left" Margin="190,0,0,0" Text="0" VerticalAlignment="Center" Width="40" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="PrimaryServiceTime_TextChanged"/>
                     <Label x:Name="PrimaryService" Content="{DynamicResource PrimaryService}" HorizontalAlignment="Right" Margin="0,0,190,0" VerticalAlignment="Center" Height="40" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
-                    <Button x:Name="SaveBtn" Content="{DynamicResource Save}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="40" Height="30" Click="SaveBtn_Click"/>
                 </Grid>
             </Grid>
             <Grid Grid.Row="1">
@@ -64,7 +63,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="RankingDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="RankingDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="RankingDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="RankingDaemonBtn" Content="{DynamicResource RankingDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -77,7 +76,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="AccountInventoryDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="AccountInventoryDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="AccountInventoryDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="AccountInventoryDaemonBtn" Content="{DynamicResource AccountInventoryDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -90,7 +89,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="CacheDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="CacheDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="CacheDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="CacheDaemonBtn" Content="{DynamicResource CacheDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -104,7 +103,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="CacheGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="CacheGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="CacheGateTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="CacheGateBtn" Content="{DynamicResource CacheGate}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -117,7 +116,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="PostOfficeDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="PostOfficeDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="PostOfficeDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="PostOfficeDaemonBtn" Content="{DynamicResource PostOfficeDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -130,7 +129,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="LobbyDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="LobbyDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="LobbyDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="LobbyDaemonBtn" Content="{DynamicResource LobbyDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -144,7 +143,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="MarketReaderDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="MarketReaderDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="MarketReaderDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="MarketReaderDaemonBtn" Content="{DynamicResource MarketReaderDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -157,7 +156,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="MarketAgentReaderTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="MarketAgentReaderTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="MarketAgentReaderTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="MarketAgentReaderBtn" Content="{DynamicResource MarketAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -170,7 +169,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="MarketDealerDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="MarketDealerDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="MarketDealerDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="MarketDealerDaemonBtn" Content="{DynamicResource MarketDealerDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -184,7 +183,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="MarketAgentDealerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="MarketAgentDealerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="MarketAgentDealerTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="MarketAgentDealerBtn" Content="{DynamicResource MarketAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -197,7 +196,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="ArenaLobbyTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="ArenaLobbyTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="ArenaLobbyTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="ArenaLobbyBtn" Content="{DynamicResource ArenaLobby}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -210,7 +209,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="AchievementDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="AchievementDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="AchievementDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="AchievementDaemonBtn" Content="{DynamicResource AchievementDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -224,7 +223,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="DuelBotDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="DuelBotDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="DuelBotDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="DuelBotDaemonBtn" Content="{DynamicResource DuelBotDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -237,7 +236,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="GameDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="GameDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="GameDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="GameDaemonBtn" Content="{DynamicResource GameDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -250,7 +249,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="InfoGateDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="InfoGateDaemonTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="InfoGateDaemonTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="InfoGateDaemonBtn" Content="{DynamicResource InfoGateDaemon}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -264,7 +263,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="LobbyGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="LobbyGateTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="LobbyGateTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="LobbyGateBtn" Content="{DynamicResource LobbyGate}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -277,7 +276,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="ChannelChattingServerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="ChannelChattingServerTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="ChannelChattingServerTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="ChannelChattingServerBtn" Content="{DynamicResource ChannelChattingServer}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>
@@ -290,7 +289,7 @@
                     </Grid.ColumnDefinitions>
 
                     <Grid Grid.Column="0">
-                        <TextBox x:Name="ManagementAgentTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                        <TextBox x:Name="ManagementAgentTime" HorizontalAlignment="Center" VerticalAlignment="Center" Width="40" Height="40" Text="0" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" TextChanged="ManagementAgentTime_TextChanged"/>
                     </Grid>
                     <Grid Grid.Column="1">
                         <Button x:Name="ManagementAgentBtn" Content="{DynamicResource ManagementAgent}" HorizontalAlignment="Center" VerticalAlignment="Center" Width="170" Height="40"/>

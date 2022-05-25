@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 using System.IO;
 
 namespace BNS
@@ -41,7 +37,7 @@ namespace BNS
                 {
                     { "itselfName", "PrimaryService" },
                     { "textName", "PrimaryServiceTime" },
-                    { "time", 10 }
+                    { "time", 100 }
                 };
                 data.Add("PrimaryService", PrimaryServiceJson);
                 //排行榜进程
@@ -196,7 +192,7 @@ namespace BNS
             }
             using (JsonTextReader reader = new JsonTextReader(file))
             {
-                JObject jObject = (JObject)JToken.ReadFrom(reader);
+                JObject jObject = JObject.Parse(JToken.ReadFrom(reader).ToString());
                 return jObject;
             }
         }
